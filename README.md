@@ -14,8 +14,8 @@ npm install react-native-taxdown-intercom
 import TaxdownIntercom from "react-native-taxdown-intercom";
 
 // ...
-
-const result = await TaxdownIntercom.multiply(3, 7);
+const options = { userId: 'test };
+const result = await TaxdownIntercom.identifier(options);
 ```
 
 ## Contributing
