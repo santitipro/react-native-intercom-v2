@@ -49,12 +49,12 @@ class TaxdownIntercomModule(reactContext: ReactApplicationContext) : ReactContex
     @ReactMethod
     fun displayHelpCenterArticle(articleId: String, promise: Promise) {
       try {
-        Intercom.client().displayMessenger();
+        Intercom.client().displayArticle(articleId);
         promise.resolve(null);
       } catch (e: Exception) {
         promise.reject(e.message);
         Log.e(TAG, "Failed display article");
       }
     }
-  
+
 }
