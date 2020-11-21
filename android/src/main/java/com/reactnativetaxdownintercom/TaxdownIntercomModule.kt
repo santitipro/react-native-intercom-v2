@@ -49,22 +49,12 @@ class TaxdownIntercomModule(reactContext: ReactApplicationContext) : ReactContex
     @ReactMethod
     fun displayHelpCenterArticle(articleId: String, promise: Promise) {
       try {
-        Intercom.client().displayArticle(articleId);
+        Intercom.client().displayMessenger();
         promise.resolve(null);
       } catch (e: Exception) {
         promise.reject(e.message);
         Log.e(TAG, "Failed display article");
       }
     }
-
-    // Example method
-    // See https://facebook.github.io/react-native/docs/native-modules-android
-    @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-
-      promise.resolve(a * b)
-
-    }
-
-
+  
 }
