@@ -19,6 +19,10 @@ class TaxdownIntercomModule(reactContext: ReactApplicationContext) : ReactContex
         return MODULE_NAME;
     }
 
+    override fun canOverrideExistingModule(): Boolean {
+      return true;
+    }
+
     @ReactMethod
     fun identifier(options: ReadableMap, promise: Promise) {
       try {
